@@ -28,19 +28,14 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     scores[activePlayer] += roundScore;
 
 
-    document.querySelector("#score-" + activePlayer).textContent =
-      scores[activePlayer];
+    document.querySelector("#score-" + activePlayer).textContent = scores[activePlayer];
 
     if (scores[activePlayer] >= 100) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       document.querySelector(".dice").style.dispaly = "none";
 
-      document
-        .querySelector(".player-" + activePlayer + "-panel")
-        .classList.add("winner");
-      document
-        .querySelector(".player-" + activePlayer + "-panel")
-        .classList.remove("active");
+      document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
+      document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
 
       play = false;
     } else {
